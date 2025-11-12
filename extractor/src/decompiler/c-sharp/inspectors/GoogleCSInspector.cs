@@ -48,9 +48,9 @@ namespace protoextractor.decompiler.c_sharp.inspectors
 				// We are in no relevant method.
 				return;
 			}
-			if (info.Method.Name.Equals("WriteRawTag"))
+			if (info.Method.Name.Equals("WriteRawTag") || info.Method.Name.Equals("WriteRawMessage"))
 			{
-				// Used to write tag information.
+				// Used to write tag information / message .
 				return;
 			}
 			// Name of the type of the proto equivalent of the property.
